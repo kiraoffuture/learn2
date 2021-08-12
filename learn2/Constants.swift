@@ -13,4 +13,5 @@ struct Constants {
 
 	static let API_URL =
 		"https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=\(PLAYLIST_ID)&key=\(API_KEY)"
+    static let VIDEO_ID = "video_id"
 }
