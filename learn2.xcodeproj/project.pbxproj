@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C07B3C6026C4CFD100CBBAFC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07B3C5F26C4CFD100CBBAFC /* Response.swift */; };
+		C0BD198126C608DB000E42FB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD198026C608DB000E42FB /* VideoTableViewCell.swift */; };
+		C0BD198426C60EA4000E42FB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD198326C60EA4000E42FB /* CacheManager.swift */; };
+		C0BD198726C61998000E42FB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BD198626C61998000E42FB /* WebKit.framework */; };
+		C0BD198B26C61A5A000E42FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BD198A26C61A5A000E42FB /* DetailViewController.swift */; };
 		C0C3417C26C3B4F7008046CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3417B26C3B4F7008046CE /* Constants.swift */; };
 		C0C3417E26C3BD3D008046CE /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3417D26C3BD3D008046CE /* Video.swift */; };
 		C0C3418026C3BD6E008046CE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C3417F26C3BD6E008046CE /* Model.swift */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		C07B3C5F26C4CFD100CBBAFC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		C0BD198026C608DB000E42FB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		C0BD198326C60EA4000E42FB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		C0BD198626C61998000E42FB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C0BD198A26C61A5A000E42FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C0C3417B26C3B4F7008046CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0C3417D26C3BD3D008046CE /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C0C3417F26C3BD6E008046CE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -39,17 +47,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0BD198726C61998000E42FB /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0BD197926C6073F000E42FB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC4B7626C123C0000BDC47 /* ViewController.swift */,
+				C0BD198A26C61A5A000E42FB /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0BD197A26C6074A000E42FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0BD198026C608DB000E42FB /* VideoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0BD197B26C6074F000E42FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C0C3417D26C3BD3D008046CE /* Video.swift */,
+				C07B3C5F26C4CFD100CBBAFC /* Response.swift */,
+				C0C3417F26C3BD6E008046CE /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0BD197C26C60756000E42FB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C0EC4B7826C123C0000BDC47 /* Main.storyboard */,
+				C0EC4B7D26C123C2000BDC47 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C0BD197D26C6075F000E42FB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0C3417B26C3B4F7008046CE /* Constants.swift */,
+				C0BD198326C60EA4000E42FB /* CacheManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C0BD198526C61998000E42FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0BD198626C61998000E42FB /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0EC4B6626C123C0000BDC47 = {
 			isa = PBXGroup;
 			children = (
 				C0EC4B7126C123C0000BDC47 /* learn2 */,
 				C0EC4B7026C123C0000BDC47 /* Products */,
+				C0BD198526C61998000E42FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,15 +129,13 @@
 			children = (
 				C0EC4B7226C123C0000BDC47 /* AppDelegate.swift */,
 				C0EC4B7426C123C0000BDC47 /* SceneDelegate.swift */,
-				C0EC4B7626C123C0000BDC47 /* ViewController.swift */,
-				C0EC4B7826C123C0000BDC47 /* Main.storyboard */,
+				C0BD197D26C6075F000E42FB /* Helpers */,
+				C0BD197C26C60756000E42FB /* Storyboards */,
+				C0BD197B26C6074F000E42FB /* Models */,
+				C0BD197A26C6074A000E42FB /* Views */,
+				C0BD197926C6073F000E42FB /* ViewControllers */,
 				C0EC4B7B26C123C2000BDC47 /* Assets.xcassets */,
-				C0EC4B7D26C123C2000BDC47 /* LaunchScreen.storyboard */,
 				C0EC4B8026C123C2000BDC47 /* Info.plist */,
-				C0C3417B26C3B4F7008046CE /* Constants.swift */,
-				C0C3417D26C3BD3D008046CE /* Video.swift */,
-				C07B3C5F26C4CFD100CBBAFC /* Response.swift */,
-				C0C3417F26C3BD6E008046CE /* Model.swift */,
 			);
 			path = learn2;
 			sourceTree = "<group>";
@@ -150,10 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0EC4B7726C123C0000BDC47 /* ViewController.swift in Sources */,
+				C0BD198426C60EA4000E42FB /* CacheManager.swift in Sources */,
 				C0EC4B7326C123C0000BDC47 /* AppDelegate.swift in Sources */,
 				C0EC4B7526C123C0000BDC47 /* SceneDelegate.swift in Sources */,
 				C0C3418026C3BD6E008046CE /* Model.swift in Sources */,
 				C0C3417C26C3B4F7008046CE /* Constants.swift in Sources */,
+				C0BD198126C608DB000E42FB /* VideoTableViewCell.swift in Sources */,
+				C0BD198B26C61A5A000E42FB /* DetailViewController.swift in Sources */,
 				C0C3417E26C3BD3D008046CE /* Video.swift in Sources */,
 				C07B3C6026C4CFD100CBBAFC /* Response.swift in Sources */,
 			);
